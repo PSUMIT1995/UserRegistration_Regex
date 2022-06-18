@@ -63,7 +63,7 @@ namespace UserRegistration
             }
         }
 
-        // Method for validateing mobile number
+        // Method for validating mobile number
         public static void MobileNumber()
         {
             string regex = "^([0-9]{2}[ ]?)[0-9]{10}$";
@@ -80,8 +80,24 @@ namespace UserRegistration
                 Console.WriteLine("invalid");
             }
         }
+        // Method for validating password
+        public static void Password()
+        {
+            string regex = "^[a-zA-Z]{8,}$";
+            Console.WriteLine("Enter your Password :");
+            string password = Console.ReadLine();
+            Regex rg = new Regex(regex);
+            bool result = rg.IsMatch(password);
+            if (result == true)
+            {
+                Console.WriteLine("valid");
+            }
+            else
+            {
+                Console.WriteLine("invalid");
+            }
+        }
+    }
 
-    } 
-    
-}
+} 
 
