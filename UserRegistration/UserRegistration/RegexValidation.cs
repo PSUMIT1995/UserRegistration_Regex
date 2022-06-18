@@ -42,6 +42,25 @@ namespace UserRegistration
             {
                 Console.WriteLine("invalid");
             }
+
+        }
+
+        // Method to validate  EmailId
+        public static void Email()
+        {
+            string regex = "[a-zA-Z0-9_.]+@[a-zA-Z.]+$";
+            Console.WriteLine("Enter EmailId");
+            string fName = Console.ReadLine();
+            Regex rg = new Regex(regex);
+            bool result = rg.IsMatch(fName);
+            if (result == true)
+            {
+                Console.WriteLine("valid");
+            }
+            else
+            {
+                Console.WriteLine("invalid");
+            }
         }
     }
 }
