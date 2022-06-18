@@ -9,7 +9,7 @@ namespace UserRegistration
 {
     public class RegexValidation
     {    
-        // Method to validate last name
+        // Method to validate First name
         public static void FirstName()
         {
             string regex = "[A-Z]{1}[a-z]{3,10}$";
@@ -62,5 +62,26 @@ namespace UserRegistration
                 Console.WriteLine("invalid");
             }
         }
-    }
+
+        // Method for validateing mobile number
+        public static void MobileNumber()
+        {
+            string regex = "^([0-9]{2}[ ]?)[0-9]{10}$";
+            Console.WriteLine("Enter your Mobile Number");
+            string mobileNo = Console.ReadLine();
+            Regex rg = new Regex(regex);
+            bool result = rg.IsMatch(mobileNo);
+            if (result == true)
+            {
+                Console.WriteLine("valid");
+            }
+            else
+            {
+                Console.WriteLine("invalid");
+            }
+        }
+
+    } 
+    
 }
+
