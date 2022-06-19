@@ -66,7 +66,8 @@ namespace UserRegistration
         // Method for validating mobile number
         public static void MobileNumber()
         {
-            string regex = "^([0-9]{2}[ ]?)[0-9]{10}$";
+           // string regex = "^([0-9]{2}[ ]?)[0-9]{10}$";
+            string regex = "^[a-zA-Z0-9]+([.][a-zA-Z0-9]+)?@[a-zA-Z0-9]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})?$";
             Console.WriteLine("Enter your Mobile Number");
             string mobileNo = Console.ReadLine();
             Regex rg = new Regex(regex);
