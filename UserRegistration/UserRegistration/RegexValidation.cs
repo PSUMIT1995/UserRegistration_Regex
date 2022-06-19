@@ -84,9 +84,10 @@ namespace UserRegistration
         // Method for validating password
         public static void Password()
         {
-           // string regex = "^[a-zA-Z]{8,}$";
-           // string regex = "^[A-Z]{1}[a-z]{8,}$";
-            string regex = "^[A-Z]{1}[a-z0-9]{8,}$";
+            // string regex = "^[a-zA-Z]{8,}$";
+            // string regex = "^[A-Z]{1}[a-z]{8,}$";
+            // string regex = "^[A-Z]{1}[a-z0-9]{8,}$";
+            string regex = "^[A-Z]{1}[a-z0-9]{8,}[$&+,:;=?@#|'<>.-^*()%!]$";
             Console.WriteLine("Enter your Password :");
             string password = Console.ReadLine();
             Regex rg = new Regex(regex);
